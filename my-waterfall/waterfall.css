@@ -1,0 +1,25 @@
+*{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+.wrapper{
+    width:800px;
+    margin:0 auto;
+}
+.wrapper ul{
+    width:100%;
+}
+.wrapper ul li{
+    float:left;
+    width:160px;
+    margin:10px;
+    /* border:1px solid #ddd; */
+}
+.wrapper ul li .item{
+    border:1px solid #eee;
+    padding:10px;
+}
+.wrapper ul li img{
+    width:100%;
+}

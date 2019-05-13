@@ -1,0 +1,326 @@
+*{
+    margin:0;
+    padding:0;
+}
+html,body{
+    width:100%;
+    height:100%;
+}
+.wrapper{
+    width:100%;
+    height:100%;
+}
+.wrapper .header{
+    position: relative;
+    height:70px;
+    background-color:#354457;
+}
+.wrapper .header .log{
+    height:70px;
+    /* margin-top:15px; */
+    /* padding-top:15px; */
+    padding-left:20px;
+    background-color:#354457;
+}
+.wrapper .header .log img{
+    width:40px;
+    height:40px;
+    vertical-align: middle;
+    /* line-height:70px; */
+    /* margin-top:15px; */
+}
+.wrapper .header .log span{
+    display: inline-block;
+    font-size:20px;
+    color:#fff;
+    text-shadow: 2px 2px 10px #fff; 
+    animation: run 2s ease-in-out infinite alternate;
+
+}
+.wrapper .header .log span:nth-of-type(2){
+    animation-delay: 0.25s;
+}
+.wrapper .header .log span:nth-of-type(3){
+    animation-delay: 0.5s;
+}
+.wrapper .header .log span:nth-of-type(4){
+    animation-delay: 0.75s;
+}
+.header .dropBtn{
+    display: none;
+    position: absolute;
+    top:50%;
+    left:30px;
+    transform: translateY(-50%);
+    padding:9px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    
+    
+    border:1px solid #fff;
+}
+.header .dropBtn > span{
+    display: block;
+    width:22px;
+    height:2px;
+    background-color:#fff;
+    margin:4px 0;
+    border-radius: 1px;
+}
+.header .dropBtn:hover{
+    transform: scale(1.1) translateY(-50%);
+    transition: all 0.3s ease-in-out;
+    background-color:rgba(255, 255, 255, 0.1);
+}
+.header .dropBtn:hover span{
+    animation: retate 2s ease-in-out infinite;
+}
+@keyframes retate{
+    0%{
+        transform: rotateZ(0deg);
+    }
+    25%{
+        transform: rotateZ(45deg);
+    }
+    50%{
+        transform: rotateZ(0deg);
+    }
+    75%{
+        transform: rotateZ(-45deg);
+    }
+    100%{
+        transform: rotateZ(0deg);
+    }
+}
+@keyframes run{
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-20px);
+    }
+}
+
+.header .dropList{
+    display: none;
+    position: absolute;
+    width:100%;
+    text-align: center;
+    z-index:999;
+    background-color: #354457;
+    cursor: pointer;
+    /* opacity: .5; */
+}
+.header .dropList dl dt,.header .dropList dl dd{
+    width:100%;
+    color:#fff;
+    padding:5px;
+}
+@media all and (max-width:768px){
+    .wrapper .header .log {
+        transform: translateX(50%);
+    }
+    .header .dropBtn{
+        display:block;
+    }
+    .contentLeft{
+        display: none;
+    }
+    .wrapper .contentRight{
+        min-width:768px;
+        left:0;
+        background:#fff !important;
+    }
+
+}
+.wrapper .contentLeft{
+    width:200px;
+    height:calc(100% - 70px);
+    background-color:#4d5e70;
+}
+.wrapper .contentLeft dl{
+    /* padding:5px 0; */
+    color:#fff;
+}
+.wrapper .contentLeft dl dt{
+    padding:8px 0;
+    margin-left:10px;
+    cursor: pointer;
+}
+.wrapper .contentLeft dl dd{
+    padding-left:30px;
+    padding-top:8px;
+    padding-bottom:8px;
+    cursor: pointer;
+}
+.wrapper .contentLeft dl dd.active{
+    background-color:#ddd;
+    color:#4d5e70;
+}
+.wrapper .contentRight{
+    position:absolute;
+    top:70px;
+    right:0;
+    width:calc(100% - 200px);
+    height:calc(100% - 70px);
+    background-color:#ddd;
+}
+.wrapper .contentRight .student-list{
+    /* display:inline-block; */
+    /* display:block; */
+    width:100%;
+    position: relative;
+    /* overflow: scroll;
+    background-color:#ddd; */
+    /* text-align: center; */
+    /* display:none; */
+    /* padding:5px 30px; */
+}
+/* .wrapper .contentRight table thead{
+    width:100%;
+} */
+table{
+    width:100%;
+}
+
+.wrapper .contentRight table tbody{
+    padding:10px;
+    width:100%;
+    text-align: center;
+}
+
+.wrapper .contentRight table tr th{
+    padding:5px 0;
+}
+.wrapper .contentRight table tr td{
+    /* min-width: 100px; */
+    background-color:#fff;
+    /* padding:5px 30px; */
+}
+tr th,tr td{
+    min-width: 100px;
+}
+tr{
+    height:30px;
+    line-height:30px;
+}
+td button{
+    padding:3px 10px;
+    border:none;
+    color:#fff;
+    cursor: pointer;
+}
+td button.change{
+    background-color:#5cb85c;
+}
+td button.del{
+    background-color:#d9534f;
+}
+td button.change:hover{
+    background-color: #398439;
+    border-color: #255625;
+}
+td button.del:hover{
+    background-color: #c9302c;
+}
+.wrapper .contentRight .addList{
+    /* width:100%; */
+    display:none;
+}
+.wrapper .contentRight .addList form{
+    width:400px;
+    margin:50px auto;
+}
+.wrapper .contentRight .addList form p{
+    padding:8px 0;
+}
+.wrapper .contentRight .addList form label{
+    text-align: right;
+    width:80px;
+    display:inline-block;
+    margin-right:10px;
+}
+.wrapper .contentRight .addList form p .btn{
+    width:80px;
+    height:30px;
+    line-height:30px;
+    margin-right:10px;
+    cursor: pointer;
+}
+.model{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    display:none;
+}
+.model.show{
+    display:block;
+}
+.model .mask{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color: #354457;
+    opacity: .5;
+}
+.model-content{
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-top:-225px;
+    margin-left:-250px;
+    width:500px;
+    height:450px;
+    background-color:#fff;
+    padding:20px;
+}
+.sel{
+    width:400px;
+    margin:50px auto;
+}
+.sel input{
+    width:330px;
+    height: 40px;
+    border:1px solid #354457;
+    border-radius: 4px;
+    padding-left:10px;
+}
+.sel p span{
+    font-weight:bold;
+    padding-left:20px;
+    cursor: pointer;
+}
+.contentRight #turnPage{
+    position: fixed;
+    bottom:20px;
+    right:20px;
+}
+.contentRight #turnPage li{
+    display:inline-block;
+    padding:5px 10px;
+    border:1px solid #000;
+    cursor: pointer;
+}
+.contentRight #turnPage li.cur-page{
+    background-color:#999;
+}
+#search-btn{
+    margin-left:5px;
+    padding:10px 10px;
+    background-color:#354457;
+}
+.chart{
+    display: none;
+}
+.chart .box{
+    display: inline-block;
+    width:450px;
+    height:450px;
+    border:1px solid #000;
+    margin: 50px;
+    vertical-align: top;
+}

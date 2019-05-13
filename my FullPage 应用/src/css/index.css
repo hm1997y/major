@@ -1,0 +1,25 @@
+.title{
+    text-align: center;
+    text-shadow: 1px 1px 50px orange,
+    -1px -1px 30px orangered;
+}
+.eat{
+    position: absolute;
+    opacity: 0;
+    width: 500px;
+    height: 330px;
+    color:orange;
+    background-size: 100% 100%; 
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 25px;
+    /* background-image: url(./src/img/1.jpg), url(./src/img/2.jpg); */
+    /* background-size: 200px 200px;  */
+    background-repeat: no-repeat;
+    background-position:30px 30px;
+}
+.food{
+    background-repeat: no-repeat;
+    background-position:30px 50px;
+
+}

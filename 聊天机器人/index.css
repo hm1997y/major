@@ -1,0 +1,117 @@
+*{
+    margin:0;
+    padding:0;
+}
+html, body{
+    width:100%;
+    height:100%;
+}
+.wrapper{
+    width:800px;
+    height:100%;
+    border:1px solid #ddd;
+    background-color: #eee;
+    margin:0 auto;
+}
+.wrapper p{
+    width:100%;
+    height:40px;
+    background-color:gray;
+    text-align:center;
+    line-height:40px;
+}
+.content{
+    overflow-y: scroll;
+    height: calc(100% - 90px);
+    padding:10px;
+}
+.content .mine{
+    float:right;
+    width:500px;
+   
+}
+.content .robot{
+    float:left;
+    width:500px;
+}
+.content .bg{
+    width:40px;
+    height:40px;
+    margin:10px;
+    background-size:100% 100%;
+    border-radius: 50%;
+}
+.content .mine  .bg{
+    float:right;
+    background-image:url(./img/3.png); 
+}
+.content .text{
+    position: relative;
+    margin-top:20px;
+    display:inline-block;
+    vertical-align: middle;
+    border-radius: 15px;
+    padding:10px;
+    max-width:250px;    
+
+
+
+
+}
+.content .mine .text{
+    float: right;
+    background-color:yellowgreen; 
+}
+.content .mine .text::after{
+    content:"";
+    width:0;
+    height:0;
+    border:10px solid transparent;
+    border-left-color: yellowgreen;
+    display:inline-block;
+    position: absolute;
+    top:5px;
+    right:-16px;
+}
+
+.content .robot .text{
+    background-color:papayawhip;
+}
+.content .robot .text::before{
+    content:"";
+    display:inline-block;
+    width:0;
+    height:0;
+    border:10px solid transparent;
+    border-right-color:papayawhip;
+    position: absolute;
+    top:5px;
+    left:-16px;
+}
+
+.content .robot .bg{
+    float:left;
+    background-image:url(./img/dog1.jpg);
+}
+.send{
+    width:100%;
+    height:50px;
+    background-color:#ddd;
+    line-height: 50px;
+    text-align: center;
+}
+.send #inp{
+    width:500px;
+    height:30px;
+    outline: none;
+    border:none;
+    font-size:16px;
+}
+.send #submit{
+    padding:3px 10px;
+    outline: none;
+    border:none;
+    font-size: 16px;
+    margin: 0 5px;
+    background-color: #ccc;
+}

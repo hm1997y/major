@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+<servlet>
+	<description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component </display-name>
+ 	<servlet-name>Loginservlet</servlet-name>
+	<servlet-class>cxt.Loginservlet</servlet-class>
+</servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>FindServlet</servlet-name>
+    <servlet-class>cxt.FindServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpdateServlet</servlet-name>
+    <servlet-class>cxt.UpdateServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>XiugaiServlet</servlet-name>
+    <servlet-class>cxt.XiugaiServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DelServlet</servlet-name>
+    <servlet-class>cxt.DelServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SCFindServlet</servlet-name>
+    <servlet-class>cxt.SCFindServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>FYFindServlet</servlet-name>
+    <servlet-class>cxt.FYFindServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+<servlet-mapping>
+    <servlet-name>Loginservlet</servlet-name>
+ 	<url-pattern>/Loginservlet</url-pattern>
+</servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FindServlet</servlet-name>
+    <url-pattern>/FindServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateServlet</servlet-name>
+    <url-pattern>/UpdateServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>XiugaiServlet</servlet-name>
+    <url-pattern>/XiugaiServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DelServlet</servlet-name>
+    <url-pattern>/DelServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SCFindServlet</servlet-name>
+    <url-pattern>/SCFindServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FYFindServlet</servlet-name>
+    <url-pattern>/FYFindServlet</url-pattern>
+  </servlet-mapping>
+ <welcome-file-list>
+	<welcome-file> index.jsp</welcome-file>
+	</welcome-file-list>
+ </web-app>
